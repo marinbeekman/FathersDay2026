@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Daddie-Boy's Universe | Happy Father's Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="universe-bg"></canvas>
+
+    <header class="hero-section" style="--bg-img: url('photos/hero.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">Happy Father's Day</span>
+            <h1 class="hero-title">Daddie-Boy ❤️</h1>
+            <p class="hero-subtitle">The center of our universe.</p>
+            <p class="hero-lead">The man who taught us how to laugh, work hard, love deeply, and always show up.</p>
+            <button class="btn btn-primary" id="explore-btn">Explore Your World</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="universe-map" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Interactive Universe</h2>
+                    <p>Tap the orbit nodes to dive deeper into the world you built for us.</p>
+                </div>
+                
+                <div class="universe-container">
+                    <div class="universe-core">
+                        <div class="core-avatar">DB</div>
+                        <span class="core-label">Daddie-Boy</span>
+                    </div>
+                    
+                    <button class="node-item" data-modal="modal-broncos" style="--angle: 0deg; --radius: 140px;">
+                        <span class="node-icon">🏈</span><span class="node-text">Broncos</span>
+                    </button>
+                    <button class="node-item" data-modal="modal-skiing" style="--angle: 36deg; --radius: 150px;">
+                        <span class="node-icon">⛷️</span><span class="node-text">Skiing</span>
+                    </button>
+                    <button class="node-item" data-modal="modal-winnie" style="--angle: 72deg; --radius: 130px;">
+                        <span class="node-icon">🐶</span><span class="node-text">Winnie</span>
+                    </button>
+                    <button class="node-item" data-modal="modal-family" style="--angle: 108deg; --radius: 160px;">
+                        <span class="node-icon">❤️</span><span class="node-text">Family</span>
+                    </button>
+                    <button class="node-item node-highlight" data-modal="modal-nightshift" style="--angle: 144deg; --radius: 140px;">
+                        <span class="node-icon">🌙</span><span class="node-text">Night Shift</span>
+                    </button>
+                    <button class="node-item" data-modal="modal-grilling" style="--angle: 180deg; --radius: 150px;">
+                        <span class="node-icon">🍔</span><span class="node-text">Grilling</span>
+                    </button>
+                    <button class="node-item" data-modal="modal-golf" style="--angle: 216deg; --radius: 135px;">
+                        <span class="node-icon">⛳</span><span class="node-text">Golf</span>
+                    </button>
+                    <button class="node-item" data-modal="modal-starwars" style="--angle: 252deg; --radius: 155px;">
+                        <span class="node-icon">⭐</span><span class="node-text">Star Wars</span>
+                    </button>
+                    <button class="node-item" data-modal="modal-favorites" style="--angle: 288deg; --radius: 145px;">
+                        <span class="node-icon">🍨</span><span class="node-text">Favorites</span>
+                    </button>
+                    <button class="node-item" data-modal="modal-nature" style="--angle: 324deg; --radius: 160px;">
+                        <span class="node-icon">🌲</span><span class="node-text">Nature</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="favorites" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Fueling the Universe</h2>
+                    <p>A few of your absolute legendary favorite things. Hover or tap to reveal.</p>
+                </div>
+                
+                <div class="grid-favorites">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="--card-img: url('photos/tomato-bar.jpg');">
+                                <div class="card-overlay"></div>
+                                <h3>Tomato Bar</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>🍕 Tomato Bar</h3>
+                                <p>Nothing beats a custom pie shared with the people you love. The elite pizza choice!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="--card-img: url('photos/cookie-skillet.jpg');">
+                                <div class="card-overlay"></div>
+                                <h3>Chili's Cookie Skillet</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>🍪 Cookie Skillet</h3>
+                                <p>Warm, gooey, perfectly baked, and topped with ice cream. The undisputed king of casual dining desserts.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="--card-img: url('photos/ben-jerrys.jpg');">
+                                <div class="card-overlay"></div>
+                                <h3>Ben & Jerry's</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>🍦 Caramel Craze</h3>
+                                <p>Ben & Jerry's Caramel Ice Cream straight out of the freezer. The perfect dynamic reward after a long day.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="--card-img: url('photos/cold-stone.jpg');">
+                                <div class="card-overlay"></div>
+                                <h3>Cold Stone</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>🍨 Cold Stone Creamery</h3>
+                                <p>Mixed meticulously to perfection on the frozen stone. Premium ice cream for a premium dad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="--card-img: url('photos/grilling.jpg');">
+                                <div class="card-overlay"></div>
+                                <h3>Grilling</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>🔥 Pitmaster Status</h3>
+                                <p>Steaks, burgers, and smoke. When Daddie-Boy steps up to the grill, everyone eats like royalty.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="--card-img: url('photos/starwars.jpg');">
+                                <div class="card-overlay"></div>
+                                <h3>Star Wars</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>🌌 The Force is Strong</h3>
+                                <p>From a galaxy far, far away to our living room. Taught us that true heroes fight for their family.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dad-stats" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Dad Core Metrics</h2>
+                    <p>An empirical assessment of exceptional capabilities.</p>
+                </div>
+                
+                <div class="stats-box">
+                    <div class="stat-group">
+                        <div class="stat-info">
+                            <span>Dad Jokes Delivery</span>
+                            <span class="stat-value">100%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="--target-width: 100%;"></div></div>
+                    </div>
+                    <div class="stat-group">
+                        <div class="stat-info">
+                            <span>Denver Broncos Loyalty</span>
+                            <span class="stat-value">100%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="--target-width: 100%;"></div></div>
+                    </div>
+                    <div class="stat-group">
+                        <div class="stat-info">
+                            <span>Night Shift Endurance (Amazon Grid)</span>
+                            <span class="stat-value">100%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="--target-width: 100%;"></div></div>
+                    </div>
+                    <div class="stat-group">
+                        <div class="stat-info">
+                            <span>Grilling Master Skill</span>
+                            <span class="stat-value">99%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="--target-width: 99%;"></div></div>
+                    </div>
+                    <div class="stat-group">
+                        <div class="stat-info">
+                            <span>Star Wars Lore Knowledge</span>
+                            <span class="stat-value">100%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="--target-width: 100%;"></div></div>
+                    </div>
+                    <div class="stat-group infinity-group">
+                        <div class="stat-info">
+                            <span>Level of Being Loved By Us</span>
+                            <span class="stat-value infinity-text">∞</span>
+                        </div>
+                        <div class="infinity-track">
+                            <div class="infinity-particle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="easter-egg-container section-padding">
+            <button class="btn btn-danger" id="easter-egg-btn">⚠️ DO NOT PRESS ⚠️</button>
+        </section>
+
+        <section id="final-letter" class="section-padding">
+            <div class="container letter-box">
+                <div class="letter-content">
+                    <p class="letter-salutation">Dear Daddie-Boy,</p>
+                    <p>I love you so much.</p>
+                    <p>Thank you for every sacrifice you've made, every lesson you've taught me, and every moment you've spent loving our family. I am so proud to be your daughter.</p>
+                    <p>You work hard. You care deeply. You always show up.</p>
+                    <p>Thank you for everything. You are the coolest dad I know.</p>
+                    <p class="letter-closing">Happy Father's Day.</p>
+                    <p class="letter-signature">Love always,<br><span class="signature-name">Marin ❤️</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay-wrapper" id="modal-wrapper">
+        <div class="modal-backdrop-close"></div>
+
+        <div class="custom-modal" id="modal-broncos">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">🏈 Denver Broncos</h3>
+            <div class="modal-body">
+                <p class="modal-desc">Whether it's game day or costume day, nobody commits harder than Daddie-Boy. Broncos for life.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/broncos.jpg');"></div>
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/broncos2.jpg');"></div>
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/broncos3.jpg');"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-modal" id="modal-skiing">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">⛷️ Chasing Powder</h3>
+            <div class="modal-body">
+                <p class="modal-desc">From local hills to Canadian mountains, you're always chasing the next adventure.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/skiing.jpg');"></div>
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/skiing2.jpg');"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-modal" id="modal-winnie">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">🐶 Winnie</h3>
+            <div class="modal-body">
+                <p class="modal-desc">Dad's favorite child. (Probably Winnie.)</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/winnie.jpg');"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-modal" id="modal-family">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">❤️ The Ultimate Core</h3>
+            <div class="modal-body">
+                <p class="modal-desc">The thing you love most isn't football, skiing, golf, Star Wars, or ice cream. It's us.</p>
+                <div class="gallery-collage">
+                    <div class="collage-item item-placeholder" style="--img: url('photos/family1.jpg');"></div>
+                    <div class="collage-item item-placeholder" style="--img: url('photos/family2.jpg');"></div>
+                    <div class="collage-item item-placeholder" style="--img: url('photos/family3.jpg');"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-modal nightshift-special-theme" id="modal-nightshift">
+            <button class="modal-close">&times;</button>
+            <div class="starfield-mini-overlay"></div>
+            <h3 class="modal-title">🌙 Night Shift Dedication</h3>
+            <div class="modal-body">
+                <div class="nightshift-quote-list">
+                    <p>Thank you for every late night.</p>
+                    <p>Thank you for every early morning.</p>
+                    <p>Thank you for every sacrifice.</p>
+                    <p>Thank you for every time you were exhausted but still showed up.</p>
+                    <p>Thank you for carrying so much responsibility for our family.</p>
+                </div>
+                <div class="nightshift-tagline">We see it. We appreciate it. We love you.</div>
+                <div class="gallery-grid" style="margin-top: 1.5rem;">
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/nightshift.jpg');"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-modal" id="modal-grilling">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">🍔 Smokehouse Master</h3>
+            <div class="modal-body">
+                <p class="modal-desc">Barbecue pitmaster expertise on full display whenever the family gathers.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/grilling2.jpg');"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-modal" id="modal-golf">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">⛳ Fairway Freedom</h3>
+            <div class="modal-body">
+                <p class="modal-desc">Every round is a good round when you're outside doing what you love.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/golf.jpg');"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-modal" id="modal-starwars">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">⭐ Galactic Saga</h3>
+            <div class="modal-body">
+                <p class="modal-desc">May the force be with the best Dad in the galaxy. Deep appreciation for high-tier sci-fi epics.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/starwars2.jpg');"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-modal" id="modal-favorites">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">🍨 Sweet Confections</h3>
+            <div class="modal-body">
+                <p class="modal-desc">From Ben & Jerry's Caramel layers to custom mixes at Cold Stone, plus elite cookie skillets at Chili's.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/icecream.jpg');"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-modal" id="modal-nature">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">🌲 The Great Outdoors</h3>
+            <div class="modal-body">
+                <p class="modal-desc">Some of our favorite memories are simply being outside together.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item item-placeholder" style="--img: url('photos/nature.jpg');"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="boss-mode-overlay">
+        <canvas id="confetti-canvas"></canvas>
+        <button id="boss-close-btn">&times; Close Boss Mode</button>
+        <div class="boss-content">
+            <h2 class="boss-title">Daddie-Boy Has Entered Boss Mode</h2>
+            <div class="boss-image-wrapper item-placeholder" style="--img: url('photos/bossmode.jpg');"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
